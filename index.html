@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="pageTitle">Exam Scheduling Optimizer</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">&#967;</div>
+      <div class="brand-text">
+        <h1 data-i18n="appTitle">Exam Scheduling Optimizer</h1>
+        <p data-i18n="appSubtitle">Graph coloring under real scheduling constraints</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <span id="summary" class="summary"></span>
+      <a class="ghost-link" href="https://github.com/Jason-Muxin-Han/Exam-Scheduling-Optimizer" target="_blank" rel="noopener" data-i18n="repoLink">GitHub repo</a>
+      <div class="lang-switch" aria-label="Language">
+        <button id="lang-zh" type="button">&#20013;&#25991;</button>
+        <button id="lang-en" type="button">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="controls-panel" id="controls" aria-label="Controls"></aside>
+    <div class="content">
+      <div id="warning" class="warning" hidden></div>
+
+      <section class="card">
+        <div class="card-head">
+          <h2 data-i18n="timetableTitle">Timetable</h2>
+          <label class="inline-label">
+            <span data-i18n="heuristicLabel">Show schedule from</span>
+            <select id="heuristic-select"></select>
+          </label>
+        </div>
+        <div id="timetable"></div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="comparisonTitle">Heuristic comparison</h2>
+        <div id="comparison"></div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="graphTitle">Conflict graph</h2>
+        <p class="hint" data-i18n="graphHint">An edge joins two subjects that share at least one student.</p>
+        <div id="graphview"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer" data-i18n="footerNote">Synthetic data only.</footer>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "exam-scheduling-optimizer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Educational exam timetabling as graph coloring: zero-build, bilingual interactive demo.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "experiment": "node analysis/run-experiment.js",
+    "serve": "python3 -m http.server 8000"
+  },
+  "license": "MIT"
+}
